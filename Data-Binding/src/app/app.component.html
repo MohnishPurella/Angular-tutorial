@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<h2>One-Way-Binding</h2>
+
+  <h3>String Interpolation</h3>
+  <p>{{message}}</p>
+
+  <h3>Property Binding</h3>
+  <button [disabled]="true">Button has been disabled using disabled property by setting its value to true</button>
+
+  <h3>Event Binding</h3>
+  <button (click)="bindValue('Binding done')">Click to bind the value to variable text by send value from HTML</button>
+  <p>{{text}}</p>
+
+<h2>Two-Way-Binding</h2>
+
+  <input type="text" [(ngModel)]="name" placeholder="Enter Name">
+  <p>Entered Name : {{name}}</p>
