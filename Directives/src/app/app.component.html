@@ -1,0 +1,48 @@
+<h1>*ngIf</h1>
+<p *ngIf="true">Text</p>
+
+<p *ngIf="display">Text</p>
+
+<p *ngIf="display; else thenBlock">
+    View Text
+</p>
+<ng-template #thenBlock>
+    <p>No Text</p>
+</ng-template>
+
+
+<div *ngIf="display; then thenBlock1 else elseBlock"></div>
+<ng-template #thenBlock1>
+    <p>View Text</p>
+</ng-template>
+<ng-template #elseBlock>
+    <p>No Text</p>
+</ng-template>
+
+<h1>*ngFor</h1>
+<div *ngFor="let animal of animals;index as i">
+   {{i}} {{animal}}
+</div>
+
+
+<h1>Class Binding</h1>
+
+<p class="text-sucess">Sucess Message</p>
+
+<p [class]="sucessClass">Sucess Message</p>
+
+<p class="text-special" [class]="sucessClass">Sucess Message</p>
+
+<p [class.text-danger]="hasError">Danger Message</p>
+
+<p [ngClass]="messageClasses">Message</p>
+
+<h1>Style Binding</h1>
+
+<p [style.color]="'orange'">Text</p>
+
+<p [style.color]="hasError ? 'red' : 'green'">Text</p>
+
+<p [style.color]="highlightColor">Text</p>
+
+<p [ngStyle]="textStyle">Text</p>
